@@ -19,167 +19,75 @@ import { supabase } from '../lib/supabase';
 // DATA PROYEK (FALLBACK - will be replaced by DB data)
 // ===================================
 const dummyProjects = [
-    {
-    title: "Portfolio v2",
-    description: "Website portofolio pribadi yang dibangun dengan React, Next.js, dan Tailwind CSS, di-deploy di Vercel.",
-    tech: ["Next.js", "React", "TailwindCSS", "Framer Motion"],
-    link: "https://github.com/username/portfolio",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
-    category: "Web/Apps",
+  {
+    title: "Cheating Detection System",
+    description: "AI-powered system to detect cheating in online exams using computer vision techniques. Team project that received Grade A.",
+    tech: ["Python", "OpenCV", "TensorFlow", "Computer Vision"],
+    link: "https://github.com/baraawael",
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop",
+    category: "AI/Computer Vision",
   },
   {
-    title: "E-Commerce API",
-    description: "RESTful API untuk platform e-commerce dengan fitur otentikasi, manajemen produk, dan transaksi.",
-    tech: ["Node.js", "Express", "MongoDB", "JWT"],
-    link: "https://github.com/username/ecommerce-api",
-    image: "https://images.unsplash.com/photo-1522199755839-a2bacb67c546?q=80&w=2072&auto=format&fit=crop",
-    category: "Web/Apps",
+    title: "Airport Criminal & Fraud Detection System",
+    description: "Advanced detection system for identifying criminals and fraudulent activities at airports. Solo project that received Grade A.",
+    tech: ["Python", "Computer Vision", "Face Recognition", "OpenCV"],
+    link: "https://github.com/baraawael",
+    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=2070&auto=format&fit=crop",
+    category: "AI/Computer Vision",
   },
   {
-    title: "UI Design System",
-    description: "Merancang komponen UI yang reusable dan konsisten untuk aplikasi web menggunakan Figma.",
-    tech: ["Figma", "Storybook"],
-    link: "#",
-    image: "https://images.unsplash.com/photo-1600132806378-62402124d9e0?q=80&w=2070&auto=format&fit=crop",
-    category: "Web/Apps",
+    title: "Supermarket Management System",
+    description: "Comprehensive management system for supermarkets with QR code integration for efficient inventory tracking and sales management.",
+    tech: ["Node.js", "Express", "MongoDB", "QR Code API"],
+    link: "https://github.com/baraawael",
+    image: "https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?q=80&w=2070&auto=format&fit=crop",
+    category: "Backend/Full-Stack",
   },
   {
-    title: "3D Product Visualization",
-    description: "Desain 3D interaktif untuk showcase produk menggunakan Spline dan Blender.",
-    tech: ["Spline", "Blender"],
-    link: "#",
-    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070&auto=format&fit=crop",
-    category: "3D Design",
+    title: "Your Solution - Complaint Management System",
+    description: "Full-featured complaint management platform with role-based access control and real-time tracking. Freelance project.",
+    tech: ["Node.js", "Express", "MongoDB", "JWT", "RBAC"],
+    link: "https://github.com/baraawael",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2070&auto=format&fit=crop",
+    category: "Backend/Full-Stack",
   },
   {
-    title: "Animated 3D Landing",
-    description: "Landing page dengan elemen 3D animasi untuk branding modern.",
-    tech: ["Spline", "Three.js"],
-    link: "#",
-    image: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?q=80&w=2070&auto=format&fit=crop",
-    category: "3D Design",
+    title: "Database Systems Collection",
+    description: "Desktop applications for Hospital, Factory, and School management systems with comprehensive database designs.",
+    tech: ["Database Design", "SQL", "Desktop Applications"],
+    link: "https://github.com/baraawael",
+    image: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?q=80&w=2070&auto=format&fit=crop",
+    category: "Backend/Full-Stack",
   },
 ];
 
 // ===================================
-// DATA SERTIFIKAT ZAIN AHMAD FAHREZI
+// DATA SERTIFIKAT
 // ===================================
-const userCertificates = [
-    {
-        title: "Belajar Membuat Aplikasi Web dengan React",
-        issuer: "Dicoding Indonesia",
-        date: "Des 2024",
-        link: "/certificates/Belajar Membuat Aplikasi Web dengan React.pdf",
-        image: "/certificate-images/Belajar Membuat Aplikasi Web dengan React.jpg",
-    },
-    {
-        title: "Belajar Dasar Pemrograman JavaScript",
-        issuer: "Dicoding Indonesia",
-        date: "Des 2024",
-        link: "/certificates/Belajar Dasar Pemrograman JavaScript.pdf",
-        image: "/certificate-images/Belajar Dasar Pemrograman JavaScript.jpg",
-    },
-    {
-        title: "Junior Web Developer (BNSP)",
-        issuer: "Badan Nasional Sertifikasi Profesi (BNSP)",
-        date: "Sep 2024",
-        link: "/certificates/SERTIFIKAT BNSP JUNIOR WEB DEVELOPER ZAIN AHMAD FAHREZI.jpeg",
-        image: "/certificate-images/SERTIFIKAT BNSP JUNIOR WEB DEVELOPER ZAIN AHMAD FAHREZI.jpg",
-    },
-    {
-        title: "Belajar Membuat Front-End Web untuk Pemula",
-        issuer: "Dicoding Indonesia",
-        date: "Des 2024",
-        link: "/certificates/Belajar Membuat Front-End Web untuk Pemula.pdf",
-        image: "/certificate-images/Belajar Membuat Front-End Web untuk Pemula.jpg",
-    },
-    {
-        title: "Operator Komputer Madya (BNSP)",
-        issuer: "Badan Nasional Sertifikasi Profesi (BNSP)",
-        date: "Des 2024",
-        link: "/certificates/Operator Komputer Madya BNSP.jpeg",
-        image: "/certificate-images/Operator Komputer Madya BNSP.jpg",
-    },
-    {
-        title: "Belajar Dasar Data Science",
-        issuer: "Dicoding Indonesia",
-        date: "Okt 2024",
-        link: "/certificates/Belajar Dasar Data Science.pdf",
-        image: "/certificate-images/Belajar Dasar Data Science.jpg",
-    },
-    {
-        title: "Belajar Dasar Structured Query Language (SQL)",
-        issuer: "Dicoding Indonesia",
-        date: "Okt 2024",
-        link: "/certificates/Belajar Dasar Structured Query Language (SQL).pdf",
-        image: "/certificate-images/Belajar Dasar Structured Query Language (SQL).jpg",
-    },
-    {
-        title: "Belajar Dasar AI",
-        issuer: "Dicoding Indonesia",
-        date: "Sep 2024",
-        link: "/certificates/Belajar Dasar AI.pdf",
-        image: "/certificate-images/Belajar Dasar AI.jpg",
-    },
-    {
-        title: "Belajar Dasar Manajemen Proyek",
-        issuer: "Dicoding Indonesia",
-        date: "Sep 2024",
-        link: "/certificates/Belajar Dasar Manajemen Proyek.pdf",
-        image: "/certificate-images/Belajar Dasar Manajemen Proyek.jpg",
-    },
-    {
-        title: "Operator Komputer Madya (VSGA)",
-        issuer: "Digital Talent Scholarship",
-        date: "Agu 2024",
-        link: "/certificates/Operator Komputer Madya VSGA.pdf",
-        image: "/certificate-images/Operator Komputer Madya VSGA.jpg",
-    },
-    {
-        title: "Junior Web Developer (VSGA)",
-        issuer: "Kominfo",
-        date: "Jul 2024",
-        link: "/certificates/Junior Web Developer VSGA.pdf",
-        image: "/certificate-images/Junior Web Developer VSGA.jpg",
-    },
-    {
-        title: "Java Fundamentals",
-        issuer: "Oracle",
-        date: "Jun 2024",
-        link: "/certificates/JAVA FUNDAMENTALS.pdf",
-        image: "/certificate-images/JAVA FUNDAMENTALS.jpg",
-    },
-    {
-        title: "Belajar Dasar Pemrograman Web",
-        issuer: "Dicoding Indonesia",
-        date: "Nov 2023",
-        link: "/certificates/Belajar Dasar Pemrograman Web.pdf",
-        image: "/certificate-images/Belajar Dasar Pemrograman Web.jpg",
-    },
-];
+const userCertificates = [];
 
 const techStack = {
-    frontend: [
-    { name: "React", icon: <FaReact className="text-[#61DAFB]" /> },
-    { name: "Next.js", icon: <SiNextdotjs className="text-white" /> },
-    { name: "JavaScript", icon: <FaJsSquare className="text-[#F7DF1E]" /> },
-    { name: "Tailwind CSS", icon: <SiTailwindcss className="text-[#38B2AC]" /> },
-    { name: "HTML5", icon: <FaHtml5 className="text-[#E34F26]" /> },
-    { name: "CSS3", icon: <FaCss3Alt className="text-[#1572B6]" /> },
-  ],
   backend: [
     { name: "Node.js", icon: <FaNodeJs className="text-[#339933]" /> },
-    { name: "Express", icon: <SiExpress className="text-white" /> },
+    { name: "Express.js", icon: <SiExpress className="text-white" /> },
+    { name: "RESTful API", icon: <FaTools className="text-[#61DAFB]" /> },
+    { name: "JWT", icon: <FaTools className="text-[#d63aff]" /> },
   ],
   database: [
     { name: "MongoDB", icon: <SiMongodb className="text-[#47A248]" /> },
     { name: "PostgreSQL", icon: <SiPostgresql className="text-[#336791]" /> },
   ],
+  ai_ml: [
+    { name: "Python", icon: <FaTools className="text-[#3776AB]" /> },
+    { name: "OpenCV", icon: <FaTools className="text-[#5C3EE8]" /> },
+    { name: "TensorFlow", icon: <FaTools className="text-[#FF6F00]" /> },
+    { name: "Computer Vision", icon: <FaTools className="text-[#00D4FF]" /> },
+  ],
   tools: [
     { name: "Git & GitHub", icon: <FaGithub className="text-white" /> },
-    { name: "Vercel", icon: <SiVercel className="text-white" /> },
-    { name: "Figma", icon: <FaFigma className="text-[#F24E1E]" /> },
-    { name: "Tools Lain", icon: <FaTools className="text-gray-400" /> },
+    { name: "GitLab", icon: <FaTools className="text-[#FCA121]" /> },
+    { name: "Docker", icon: <FaTools className="text-[#2496ED]" /> },
+    { name: "Postman", icon: <FaTools className="text-[#FF6C37]" /> },
   ],
 };
 
@@ -347,7 +255,7 @@ const ProjectCard = ({ project }) => {
 // ===================================
 function ProjectSection() {
   const [activeTab, setActiveTab] = useState('Projects');
-  const [projectCategory, setProjectCategory] = useState('Web/Apps');
+  const [projectCategory, setProjectCategory] = useState('Backend/Full-Stack');
   const [previewCertificate, setPreviewCertificate] = useState(null);
   const { hideNavbar, showNavbar } = useNavbar();
 
@@ -569,8 +477,8 @@ function ProjectSection() {
                   {/* Only show category buttons for dummy data */}
                   {projectsFromDB.length === 0 && (
                     <div className="flex justify-center gap-4 mb-8">
-                      <button className={`px-5 py-2 rounded-full font-semibold transition-all duration-200 border ${projectCategory === 'Web/Apps' ? 'bg-cyan-700/80 text-white border-cyan-400 shadow-cyan-500/10 shadow-lg' : 'bg-slate-900/60 text-cyan-200 border-slate-700 hover:bg-cyan-800/40 hover:text-white'}`} onClick={() => setProjectCategory('Web/Apps')}>Web/Apps</button>
-                      <button className={`px-5 py-2 rounded-full font-semibold transition-all duration-200 border ${projectCategory === '3D Design' ? 'bg-cyan-700/80 text-white border-cyan-400 shadow-cyan-500/10 shadow-lg' : 'bg-slate-900/60 text-cyan-200 border-slate-700 hover:bg-cyan-800/40 hover:text-white'}`} onClick={() => setProjectCategory('3D Design')}>3D Design</button>
+                      <button className={`px-5 py-2 rounded-full font-semibold transition-all duration-200 border ${projectCategory === 'Backend/Full-Stack' ? 'bg-cyan-700/80 text-white border-cyan-400 shadow-cyan-500/10 shadow-lg' : 'bg-slate-900/60 text-cyan-200 border-slate-700 hover:bg-cyan-800/40 hover:text-white'}`} onClick={() => setProjectCategory('Backend/Full-Stack')}>Backend/Full-Stack</button>
+                      <button className={`px-5 py-2 rounded-full font-semibold transition-all duration-200 border ${projectCategory === 'AI/Computer Vision' ? 'bg-cyan-700/80 text-white border-cyan-400 shadow-cyan-500/10 shadow-lg' : 'bg-slate-900/60 text-cyan-200 border-slate-700 hover:bg-cyan-800/40 hover:text-white'}`} onClick={() => setProjectCategory('AI/Computer Vision')}>AI/Computer Vision</button>
                     </div>
                   )}
                   

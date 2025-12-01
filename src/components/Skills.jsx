@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Skills = () => {
-  const skillsList = ['React', 'Javascript', 'Node.js', 'Tailwind'];
+  const skillsList = ['Node.js', 'Express.js', 'MongoDB', 'RESTful API', 'JWT', 'Python', 'React', 'Git'];
 
   return (
     <div className="flex flex-row flex-wrap gap-3 mt-6 justify-left w-full">

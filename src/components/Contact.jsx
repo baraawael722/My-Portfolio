@@ -221,23 +221,16 @@ const Contact = () => {
     {
       name: 'GitHub',
       icon: <FaGithub />,
-      url: 'https://github.com/ZainAhmadF28',
+      url: 'https://github.com/baraawael',
       color: 'from-gray-600 to-gray-800',
       hoverColor: 'hover:shadow-gray-500/25'
     },
     {
-      name: 'Instagram',
-      icon: <FaInstagram />,
-      url: 'https://instagram.com/zain.ahmadf',
-      color: 'from-pink-500 to-purple-600',
-      hoverColor: 'hover:shadow-pink-500/25'
-    },
-    {
-      name: 'TikTok',
-      icon: <SiTiktok />,
-      url: 'https://tiktok.com/@zain.ahmadf',
-      color: 'from-black to-red-600',
-      hoverColor: 'hover:shadow-red-500/25'
+      name: 'GitLab',
+      icon: <FaGithub />,
+      url: 'https://gitlab.com/baraawael',
+      color: 'from-orange-500 to-orange-700',
+      hoverColor: 'hover:shadow-orange-500/25'
     }
   ];
 
